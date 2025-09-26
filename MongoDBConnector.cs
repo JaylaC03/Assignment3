@@ -10,5 +10,10 @@ namespace ClassLibrary1
         {
             client = new MongoClient(connectionString);
         }
+        public bool Ping()
+        {
+            // not implemented yet
+            return false;
+        }
     }
 }
