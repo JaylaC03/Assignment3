@@ -2,7 +2,7 @@
 
 namespace ClassLibrary1
 {
-    public class MongoDBConnector
+    public class MongoDBConnector : IDBConnector
     {
         private MongoClient client;
 

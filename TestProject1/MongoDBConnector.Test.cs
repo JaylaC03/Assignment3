@@ -16,7 +16,7 @@ namespace TestProject1
 
             bool result = connector.Ping();
 
-            Assert.True(result);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(result);
 
             await container.DisposeAsync();
         }
