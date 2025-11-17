@@ -30,4 +30,17 @@ public class MongoDBConnectorTests : IAsyncLifetime
         // Assert
         Assert.True(result);
     }
+    [Fact]
+    public void Ping_WithInvalidConnection_ReturnsFalse()
+    {
+        // Arrange
+        var invalidConnectionString = "mongodb://invalid:27017";
+        var connector = new MongoDBConnector(invalidConnectionString);
+
+        // Act
+        var result = connector.Ping();
+
+        // Assert
+        Assert.False(result);
+    }
 }
